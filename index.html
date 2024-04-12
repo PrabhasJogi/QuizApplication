@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz APP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container quiz-container" id="sectionHomePage">
+        <div class="row d-flex flex-column justify-content-center">
+            <div class="col-12 text-center">
+                <img src="download.png" class="quiz-image"/> 
+            </div>
+            <div class="text-center">
+                <h1 class="quiz-heading ">Online Quiz</h1>
+                <p class="ready-to-start ">Ready to start</p>
+                <button class="start-button" onclick="display('sectionnextpage')">Start</button>
+            </div>
+        </div>
+    </div> 
+
+    <div id="sectionnextpage" style="display: none;">
+        <div class="container quiz-main-container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="online-quiz">Online Quiz</h1>
+                    <label class="scoring">Score: <span id="score">0</span></label>
+                </div>
+                <div class="col-12" id="question_container">
+                </div>
+                <div class="col-12 d-flex justify-content-center" id="timer-container">
+                </div>
+                <div class="col-12 col-md-6" id="option-1-container">
+                </div>
+                <div class="col-12 col-md-6" id="option-2-container">
+                </div>
+                <div class="col-12 col-md-6" id="option-3-container">
+                </div>
+                <div class="col-12 col-md-6" id="option-4-container">
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <button class="btn btn-primary toggle-button" id="next-button">Next</button>
+                <button class="btn btn-success toggle-button d-none" id="submit-button">Submit</button>
+            </div>
+        </div>
+    </div> 
+
+    <div class="container result-main-container" id="sectionresults">
+        <div class="row">
+            <div class="col-12 results-info">
+                <h1 class="quiz-results">Quiz Results</h1>
+                <h1 class="result-score">Your Score is <span id="actual_score"></span>/10</h1>
+                <p class="wrong-answers-heading" id="wrongly-choosen-msg">Wrongly Choosen Questions </p>
+            </div>
+            <div class="feedback-container col-12" id="fb-container">
+                
+            </div>
+            <img src ="happy-birthday-hurray.gif"  id="hurray-image" class="d-none m-auto"/>
+            <p class="hurray-msg col-12 d-none" id="result_message">"Hurray You Got All the questions right"</p>
+            <button class="btn btn-success mb-5 mt-3 restart_btn" id="restart-button">RESTART</button>
+        </div>
+    </div> 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
